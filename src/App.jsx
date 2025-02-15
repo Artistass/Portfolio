@@ -1,8 +1,8 @@
 import "./App.css";
+import ThemeSelect from "./Components/ThemeSelect/ThemeSelect";
+import LanguageSelect from "./Components/LanguageSelect/LanguageSelect";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import LanguageSelect from "./Components/LanguageSelect/LanguageSelect";
-import ThemeSelect from "./Components/ThemeSelect/ThemeSelect";
 import { supportedLanguages } from "../i18n";
 import { supportedThemes } from "../colorThemes";
 import Project_1 from "./Components/Project_1/Project_1";
@@ -32,12 +32,12 @@ function App() {
   const cvLinks = {
     EN: "/CV/EN_Antanas_Varanauskas_Resume.pdf",
     DE: "/CV/DE_Antanas_Varanauskas_Bewerbung.pdf",
-    LT: "/CV/LT_Antanas.Varanauskas_Gyvenimo_Aprasymas.pdf"
+    LT: "/CV/LT_Antanas_Varanauskas_CV.pdf",
   };
   // CV Download
   const handleDownload = () => {
     const fileUrl = cvLinks[selectedLanguage];
-  
+
     const link = document.createElement("a");
     link.href = fileUrl;
     link.download = fileUrl.substring(fileUrl.lastIndexOf("/") + 1); // Extracts original file name
@@ -662,34 +662,48 @@ function App() {
         {/* Section 4 */}
         <section className="section-4-container" id="contact">
           <div className="section-4-year-and-cv--about-text-container">
-           
-          <div className="section-4-cv-container">
-            <div>
-      <h2 className="section-4-cv-title">{t("download_cv_tile")}</h2>
-      <p className="section-4-cv-text">{t("download_cv_text")}</p>
+            <div className="section-4-cv-container">
+              <div>
+                <h2 className="section-4-cv-title">{t("download_cv_tile")}</h2>
+                <p className="section-4-cv-text">{t("download_cv_text")}</p>
 
-      {/* Language selection dropdown */}
-      <select
-        className="section-4-cv-select"
-        value={selectedLanguage}
-        onChange={(e) => setSelectedLanguage(e.target.value)}
-      >
-        <option value="EN">{t("download_cv_EN")}</option>
-        <option value="LT">{t("download_cv_LT")}</option>
-        <option value="DE">{t("download_cv_DE")}</option>
-      </select>
+                {/* Language selection dropdown */}
+                <select
+                  className="section-4-cv-select"
+                  value={selectedLanguage}
+                  onChange={(e) => setSelectedLanguage(e.target.value)}
+                >
+                  <option value="EN">{t("download_cv_EN")}</option>
+                  <option value="LT">{t("download_cv_LT")}</option>
+                  <option value="DE">{t("download_cv_DE")}</option>
+                </select>
 
-      {/* Download button */}
-      <button 
-      className="section-4-cv-button"
-      onClick={handleDownload}
-      >
-        {t("download_cv")}
-      </button>
+                {/* Download button */}
+                <button
+                  className="section-4-cv-button"
+                  onClick={handleDownload}
+                >
+                  {t("download_cv")}
+                </button>
+              </div>
+
+              <div className="section-4-linkedin-container">
+                <h5 className="section-linkedin-title-text">
+                  {t("linkedin_text")}
+                </h5>
+                <a
+                  href="https://www.linkedin.com/in/antanas-varanauskas/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/Linkedin_Logo/Linkedin-logo-white-png-wordmark-icon-horizontal-900x233.png"
+                    alt="linkedin-logo"
+                    className="section-4-linkedin-img"
+                  />
+                </a>
+              </div>
             </div>
-            
-      <h5 className="section-4-year-text">@2024</h5>
-    </div>
 
             <div className="section-4-about-text--email-link">
               <h3 className="section-4-about-text">{t("contact_text")}</h3>
@@ -703,9 +717,6 @@ function App() {
                 <i className="fa-solid fa-arrow-right"></i>
               </div>
             </div>
-
-       
-
           </div>
         </section>
       </main>

@@ -56,6 +56,8 @@ const resources = {
       download_cv_EN: "English (EN)",
       download_cv_DE: "German (DE)",
       download_cv_LT: "Lithuanian (LT)",
+      // Linkedin
+      linkedin_text: "Connect with Me on LinkedIn.",
 
       // Footer
       to_up: "To up",
@@ -130,6 +132,8 @@ const resources = {
       download_cv_EN: "Englisch (EN)",
       download_cv_DE: "Deutsch (DE)",
       download_cv_LT: "Litauisch (LT)",
+      // Linkedin
+      linkedin_text: "Vernetze dich mit mir auf LinkedIn.",
 
       // Footer
       to_up: "Nach oben",
@@ -204,6 +208,8 @@ const resources = {
       download_cv_EN: "Anglų kalba (EN)",
       download_cv_DE: "Vokiečių kalba (DE)",
       download_cv_LT: "Lietuvių kalba (LT)",
+      // Linkedin
+      linkedin_text: "Susisiekime per LinkedIn.",
 
       // Footer
       to_up: "Į viršų",

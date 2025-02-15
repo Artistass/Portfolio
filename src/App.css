@@ -877,7 +877,7 @@ margin-top: 8rem;
 .section-4-cv-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   padding: 2rem;
 }
 
@@ -919,11 +919,25 @@ option {
   cursor: pointer;
 }
 
-.section-4-year-text {
+.section-4-linkedin-container {
+  display: block;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin-top: 8rem;
+}
+
+.section-linkedin-title-text {
   color: var(--text-color);
   font-size: var(--h5-text-large);
-  margin-top: 12rem;
+  margin-bottom: 1rem;
 }
+
+.section-4-linkedin-img {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
 
 .section-4-about-text--email-link {
   display: flex;
@@ -1058,10 +1072,16 @@ option {
   .section-4-cv-button {
     font-size: var(--h6-text-medium);
   }
-
-  .section-4-year-text {
+  .section-4-linkedin-container {
     margin-top: 5rem;
+  }
+
+  .section-linkedin-title-text {
     font-size: var(--h5-text-medium);
+  }
+  
+  .section-4-linkedin-img {
+    width: 130px;
   }
 }
 
@@ -1098,9 +1118,16 @@ option {
     padding: .8rem 1rem;
   }
 
-  .section-4-year-text {
+  .section-4-linkedin-container {
     margin-top: 3rem;
+  }
+
+  .section-linkedin-title-text {
     font-size: var(--h5-text-small);
+  }
+  
+  .section-4-linkedin-img {
+    width: 100px;
   }
 }
 
@@ -1145,9 +1172,16 @@ option {
     font-size: var(--h6-text-X-small);
   }
 
-  .section-4-year-text {
-    margin-top: 2rem;
+  .section-4-linkedin-container {
+    margin-top: 3rem;
+  }
+
+  .section-linkedin-title-text {
     font-size: var(--h5-text-X-small);
+  }
+  
+  .section-4-linkedin-img {
+    width: 80px;
   }
 }
 
